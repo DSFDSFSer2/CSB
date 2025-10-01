@@ -1,0 +1,24 @@
+model: "tic_sfma"
+dataset: "imagenet"
+dataset_path: '/data1/mzc/dataset/imgnet'
+epochs: 120
+learning_rate: 1.e-4
+num_workers: 16
+quality_level: 1 # {1,2,3,4}
+task_lmbda: 1.8 #{1.8 ,3.5, 6.7, 13}
+batch_size: 8
+test_batch_size: 32
+aux_learning_rate: 1.e-3
+patch_size: 256
+cuda: True
+gpu_id: 2
+save: True
+clip_max_norm: 1.0
+name: "exp_class"
+exp_name: "exp_class_fusion"
+root: "./LOG_PATH"
+seed: 42
+checkpoint: "/data1/mzc/code/ECCV2024-AdpatICMH-main/models/base_codec_1.pth.tar"
+# checkpoint: "/data1/mzc/code/ECCV2024-AdpatICMH-main/LOG_PATH/exp_class/4/checkpoint.pth.tar"
+# checkpoint: "/data1/mzc/code/ECCV2024-AdpatICMH-main/models_sfma_class/ckpt_cls_level4.tar"
+
